@@ -1,5 +1,3 @@
-**# computingpower
-computing-power-center service packages and configuration files
 **# 城市算力中心平台部署说明
 
 ## 一、安装服务
