@@ -1168,8 +1168,8 @@ create table sys_resource_apimapping
    rsuc_code            varchar(200)  comment '资源编号',
    ischecked            int default 1  comment '是否权限校验 1:校验2：不校验',
    locking              int default 1  comment '锁定  1：未锁定   2：锁定',
-   field1               varchar(50)  comment '所属模块',
-   field2               varchar(50)  comment '备用字段2',
+   field1               varchar(50)  comment '所属模块(OPS：为运营权限 其他为门户菜单权限)',
+   field2               varchar(50)  comment '所属系统 OPS:运营系统 POTRAL:门户系统',
    field3               varchar(50)  comment '备用字段3',
    field4               varchar(50)  comment '备用字段4',
    field5               varchar(50)  comment '备用字段5',
@@ -1350,13 +1350,13 @@ INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'OPS_DDC_MANAGE_STATUS_35', 'OPS_DDC_MANAGE_STATUS', '销毁', 'Burn', '35', 'DDC管理-1155DDC状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'OPS_MGR_STATE_STATUS_1', 'OPS_MGR_STATE_STATUS', '冻结', 'Frozen', '1', '门户-官方DDC管理-DDC运营冻结状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'OPS_MGR_STATE_STATUS_5', 'OPS_MGR_STATE_STATUS', '正常', 'Valid', '5', '门户-官方DDC管理-DDC运营冻结状态', '2', '1');
-INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'DDC_GENERATE_STATE_STATUS_1', 'DDC_GENERATE_STATE_STATUS', '生成中', 'Generation Processing', '1', '门户-官方DDC管理-DDC生成状态', '2', '1');
+INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'DDC_GENERATE_STATE_STATUS_1', 'DDC_GENERATE_STATE_STATUS', '生成处理中', 'Generation Processing', '1', '门户-官方DDC管理-DDC生成状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'DDC_GENERATE_STATE_STATUS_5', 'DDC_GENERATE_STATE_STATUS', '正常', 'Valid', '5', '门户-官方DDC管理-DDC生成状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'DDC_GENERATE_STATE_STATUS_10', 'DDC_GENERATE_STATE_STATUS', '生成失败', 'Generation Failed', '10', '门户-官方DDC管理-DDC生成状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_1', 'PORTAL_DDC_STATE_STATUS', '正常', 'Valid', '1', '门户-官方DDC管理-DDC发送状态', '2', '1');
-INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_4', 'PORTAL_DDC_STATE_STATUS', '销毁中', 'Burning', '4', '门户-官方DDC管理-DDC发送状态', '2', '1');
+INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_4', 'PORTAL_DDC_STATE_STATUS', '销毁处理中', 'Burning', '4', '门户-官方DDC管理-DDC发送状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_5', 'PORTAL_DDC_STATE_STATUS', '销毁', 'Burn', '5', '门户-官方DDC管理-DDC发送状态', '2', '1');
-INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_20', 'PORTAL_DDC_STATE_STATUS', '发送中', 'Sending', '20', '门户-官方DDC管理-DDC发送状态', '2', '1');
+INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_20', 'PORTAL_DDC_STATE_STATUS', '发送处理中', 'Sending', '20', '门户-官方DDC管理-DDC发送状态', '2', '1');
 INSERT INTO `chain_status_enums` ( `cse_code`, `cse_p_code`, `cse_cn_desc`, `cse_en_desc`, `cse_value`, `cse_remark`, `lockable`, `cse_sort`) VALUES ( 'PORTAL_DDC_STATE_STATUS_25', 'PORTAL_DDC_STATE_STATUS', '发送失败', 'Send Failed', '25', '门户-官方DDC管理-DDC发送状态', '2', '1');
 
 
@@ -1367,7 +1367,7 @@ INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `p
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('2', '1', 'P1', '首页', '1', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('3', '1', 'P2', '门户配置管理', '2', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('4', '1', 'P3', '注册用户管理', '3', '1', '1');
-INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('5', '1', 'P4', '链节点管理', '4', '1', '1');
+INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('5', '73', 'P4', '节点管理', '4', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('6', '1', 'P5', '链账户管理', '5', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('7', '1', 'P6', '网络接入', '6', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('8', '1', 'P7', '应用接入', '7', '1', '1');
@@ -1379,7 +1379,7 @@ INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `p
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('14', '5', 'P13', '查看', '2', '2', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('15', '5', 'P14', '确认入网', '3', '2', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('16', '5', 'P15', '退网', '4', '1', '1');
-INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('17', '6', 'P16', '能量值价格管理', '1', '1', '1');
+INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('17', '73', 'P16', '能量值价格管理', '1', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('18', '6', 'P17', '链账户信息', '2', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('19', '6', 'P18', '能量值/资源消耗流水', '3', '1', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('20', '17', 'P19', '新增', '1', '2', '1');
@@ -1430,8 +1430,7 @@ INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `p
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('71', '24', 'P70', '保存', '1', '2', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('26', '24', 'P25', '修改接入方式', '1', '2', '1');
 INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('72', '5', 'P71', '删除', '1', '2', '1');
-
-
+INSERT INTO `sys_resource` (`rsuc_id`, `parent_id`, `rsuc_code`, `rsuc_name`, `priority`, `rsuc_type`, `locking`) VALUES ('73', '1', 'P72', '链节点管理', '1', '1', '1');
 
 
 #------初始管理员角色-----
@@ -1449,7 +1448,7 @@ SELECT
 FROM sys_role ro LEFT JOIN sys_resource re ON ro.role_id = re.locking
 WHERE ro.role_id =1;
 INSERT INTO `sys_role_resource` (`role_id`, `rsuc_id`) VALUES ( '1', '72');
-
+INSERT INTO `sys_role_resource` (`role_id`, `rsuc_id`) VALUES ( '1', '73');
 
 
 #------初始管理员用户----
