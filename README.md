@@ -9,7 +9,7 @@
 | ----- | ----- |----- |----- |----- |
 |门户系统前端，运营管理系统前端，Nginx，算力中心OpenAPI | 2  | 8  |200GB| 1台
 | 门户系统后端、运营管理系统后端及相关微服务 | 4 |16 |300GB| 1台
-| 链服务，[kong网关](kong网关部署文档地址)    | 2  | 8  |200GB| 1台
+| 链服务，[kong网关](https://github.com/BSN-DDC/ddc-kong-gateway)    | 2  | 8  |200GB| 1台
 | 数据库，缓存服务，Sftp | 4  | 8  |200GB| 1台
 
 ### 1.2. 建议配置
@@ -18,7 +18,7 @@
 | ----- | ----- |----- |----- |----- |
 |门户系统前端，运营管理系统前端，Nginx，算力中心OpenAPI | 4 | 8  |200GB| 1台
 | 门户系统后端、运营管理系统后端及相关微服务 | 8 |32 |500GB| 1台
-| 链服务，[kong网关](kong网关部署文档地址)   | 8  | 16  |200GB| 1台
+| 链服务，[kong网关](https://github.com/BSN-DDC/ddc-kong-gateway)   | 8  | 16  |200GB| 1台
 | 数据库，缓存服务，Sftp | 8  | 16  |200GB| 1台
 
 ## 二、环境要求
@@ -95,7 +95,7 @@ echo "/dev/sdb1 /bsn xfs defaults 0 0" >> /etc/fstab
 | ddc-chainsrv-wenchang | 文昌链服务 | Oracle JDK1.8  x64 |
 | ddc-chainsrv-taian | 泰安链服务 | Oracle JDK1.8  x64 |
 | portal-web | 门户前端页面 |  |
-| operation-web | 运营系统前端页面 |  |  
+| operation-web | 运营系统前端页面 |  |
 
 ### 4.2. 服务部署流程
 
@@ -661,7 +661,7 @@ operesty-nginx
     ├── portal.conf
     ├── share-proxy.conf
     └── status.conf
- ```   
+```
 
 
 #### 4.9.2. 配置文件部分详解
