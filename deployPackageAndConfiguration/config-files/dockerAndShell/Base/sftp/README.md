@@ -1,6 +1,5 @@
 
 #### 1. Sftp安装包目录结构
-- sftp应用启动文件：[github地址](github地址)
 ```shell
 # 按照如下目录结构创建文件夹
 sftp

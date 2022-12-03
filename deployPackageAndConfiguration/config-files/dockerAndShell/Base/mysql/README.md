@@ -1,6 +1,5 @@
 #### 1. MySQL安装包目录结构
 
-- mysql应用配置文件：[my.cnf](文件地址)
 - 数据库初始化脚本：[mysql-schema.sql](https://githubxxx.com)
 
 ```shell

@@ -29,8 +29,6 @@ docker build -t java11-cn:11.0.16.1 .
 
 #### 2. 服务启动目录
 
-- 后端相关微服务启动文件：[https://github地址](https://github地址)
-
 ```shell
 # 创建日志路径
 mkdir -p /bsn/ddclogs
@@ -137,7 +135,6 @@ docker-compose up -d
 
 #### 5. 算力中心OpenApi启动
 
-- 算力中心OpenApi服务启动文件：[github地址](github地址)
 
 ```shell
 # 目录结构

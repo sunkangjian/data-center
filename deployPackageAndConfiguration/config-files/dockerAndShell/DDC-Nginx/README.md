@@ -1,7 +1,5 @@
 #### 1. 服务目录结构
 
-- nginx启动文件：[https://github地址](https://github地址)
-
 ```shell
 mkdir -p $PWD/operesty-nginx/{conf,html,logs,ssl,stream}
 mkdir -p $PWD/operesty-nginx/html/{operation,portal}

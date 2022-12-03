@@ -2,9 +2,6 @@
 
 #### 1. Nacos安装包目录结构
 
-- Nacos应用启动配置文件：[application.properties](github地址)
-- Nacos应用启动文件：[https://github地址](github地址)
-
 ```shell
 mkdir -p $PWD/nacos/{conf,data,logs,plugins}
 # 按照如下目录结构创建文件夹，把application.properties放置conf文件夹内

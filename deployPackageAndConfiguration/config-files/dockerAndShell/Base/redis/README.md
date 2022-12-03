@@ -1,8 +1,6 @@
 
 #### 1. Redis安装包目录结构
 
-- redis6应用启动配置文件：[redis.conf](https://raw.githubusercontent.com/redis/redis/6.0/redis.conf)
-- redis应用启动文件：[github地址](github地址)
 ```shell
 mkdir -p $PWD/redis/{conf,data,logs}
 # 按照如下目录结构创建文件夹，把redis.conf放置conf文件夹内

@@ -1,5 +1,5 @@
 #### 1. 服务目录结构
-- 链服务启动文件：[https://github地址](https://github地址)
+
 ```shell
 # 链服务目录结构，解压后自然生成
 tar -xzvf ChainService.tar.gz
