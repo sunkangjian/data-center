@@ -1,8 +1,7 @@
 #### 1. 服务目录结构
 
 ```shell
-# 链服务目录结构，解压后自然生成
-tar -xzvf ChainService.tar.gz
+# 链服务目录结构
 taianchain-ddc-service
 ├── docker-compose.yml
 ├── pkg

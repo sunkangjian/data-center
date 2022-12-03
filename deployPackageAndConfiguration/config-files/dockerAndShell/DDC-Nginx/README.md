@@ -16,7 +16,7 @@ operesty-nginx
 ├── ssl
 └── stream
     ├── jsonlog.lua
-    ├── openapi-saas.conf
+    ├── openapi.conf
     ├── operation.conf
     ├── portal.conf
     ├── share-proxy.conf
@@ -32,7 +32,7 @@ operesty-nginx
 # 若有SSL证书和域名的情况下端口可统一配置443，通过server_name进行区分服务
 # 三个服务配置都有80重定向443，根据实际需求开启
 
-operesty-nginx/stream/{operation.conf,portal.conf,openapi-saas.conf}
+operesty-nginx/stream/{operation.conf,portal.conf,openapi.conf}
 # server{
 #    listen 80;
 #    server_name  xxx.xxx.com;
@@ -57,7 +57,7 @@ server {
 #   server_name  xxxx.portal.com;
 ...
 
-operesty-nginx/stream/openapi-saas.conf
+operesty-nginx/stream/openapi.conf
 server {
   # listen       443 ssl; 
   listen       82;
