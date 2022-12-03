@@ -77,7 +77,7 @@ echo "/dev/sdb1 /bsn xfs defaults 0 0" >> /etc/fstab
 
 ### 4.1. 获取安装包
 
-- [jar包下载地址](github下载地址)：git clone  
+- [jar包下载地址](https://github.com/BSN-DDC/computingpower/tree/main/deployPackageAndConfiguration/packages)：git clone  
 
 | 服务标识 |  服务说明     | 环境要求 |
 | -------- | ------------ | ------- |
@@ -107,7 +107,7 @@ echo "/dev/sdb1 /bsn xfs defaults 0 0" >> /etc/fstab
 
 #### 4.3.1. MySQL安装包目录结构
 
-- 数据库初始化脚本：[mysql-schema.sql](文件地址)
+- 数据库初始化脚本：[mysql-schema.sql](https://github.com/BSN-DDC/computingpower/tree/main/deployPackageAndConfiguration/database/mysql)
 - Mysql应用启动文件：[mysql](https://github.com/BSN-DDC/computingpower/tree/main/deployPackageAndConfiguration/config-files/dockerAndShell/Base/mysql)
 ```shell
 mkdir $PWD/mysql/script
@@ -251,11 +251,36 @@ curl -X POST 'http://{NACOS-HOST}:8848/nacos/v1/console/namespaces' -d 'customNa
 | ddc-web-common.yml | 门户，运营服务配置 |
 | ddc-web-sftp.yml | sftp配置 |
 | ddc-web-email.yml | 邮件服务配置 |
-| kong-gateway-config.yml | 节点网关客户端配置； |
-| ddc-chainsrv-{链名称全拼}.yaml | 链服务配置：链名称全拼如zhoingyi等 |
+| kong-gateway-config.yml | 节点网关客户端配置；  注意： |
+| ddc-chainsrv-{链名称全拼}.yaml | 链服务配置： |
 
-通过Nacos控制台页面【配置管理】-【配置列表】-【ddc_hashrate_system】导入应用服务端配置文件压缩包，注意配置文件需导入到【ddc_hashrate_system】空间，不要导入public(保留空间)。
-关于更多的nacos控制台说请参考[nacos官方文档](https://nacos.io/zh-cn/docs/console-guide.html)
+kong客户单配置可以从nacos或者运营系统修改。kong-gateway-config.yml
+
+```yaml
+  kong:
+    #网关中创建的consumers中Basic Auth用户名与密码
+    password: "abc123"
+    #修改后链服务需要重启
+    api-key: "hashratee51840118927d62263437c8deaade5ce1253452ea1a3da3784aa80ff"
+    #网关中创建的consumers中Basic Auth用户名与密码
+    user-name: "admin"
+    tps: 20
+    tpd: 5000000
+    #修改后链服务需要重启
+    base-address: "http://10.0.51.204:18601/"
+    #修改后链服务需要重启 必须是 ip:port 格式，前缀不要加任何协议
+    base-address-grpc: "10.0.51.204:18602"
+    #修改后链服务需要重启
+    base-address-websocket: "http://10.0.51.204:18602/"
+
+```
+
+
+
+##### 4.4.4.2. 导入应用服务配置到nacos
+
+1- 通过Nacos控制台页面【配置管理】-【配置列表】-【ddc_hashrate_system】导入应用服务端配置文件压缩包2- 注意配置文件需导入到【ddc_hashrate_system】空间，不要导入public(保留空间)。
+3- 关于更多的nacos控制台说请参考[nacos官方文档](https://nacos.io/zh-cn/docs/console-guide.html)
 
 ### 4.5. Redis部署
 
