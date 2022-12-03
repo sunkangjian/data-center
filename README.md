@@ -101,9 +101,7 @@ echo "/dev/sdb1 /bsn xfs defaults 0 0" >> /etc/fstab
 
 ### 4.2. 服务部署流程
 
-<div align="center">
-<img src=https://ipfscc.bsngate.com:18602/ipfs/peer1/downkey101/api/v0/cat?arg=QmdrYb2zSWNJpj4ehhC4AWhHrwnrcAtv8zWh87WghWeSqx />
-</div>
+![](https://github.com/BSN-DDC/computingpower/blob/main/deployPackageAndConfiguration/%E7%AE%97%E5%8A%9B%E4%B8%AD%E5%BF%83%E6%9C%8D%E5%8A%A1%E7%BD%91%E7%BB%9C%E5%9B%BE.png)
 
 
 
