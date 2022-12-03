@@ -1,6 +1,8 @@
 # **城市算力中心开发者门户部署说明**
 [TOC]
 
+
+
 ## 一、硬件要求
 
 ### 1.1. 最小配置
@@ -98,6 +100,8 @@ echo "/dev/sdb1 /bsn xfs defaults 0 0" >> /etc/fstab
 | operation-web | 运营系统前端页面 |  |
 
 ### 4.2. 服务部署流程
+
+![](https://ipfscc.bsngate.com:18602/ipfs/peer1/downkey101/api/v0/cat?arg=QmdrYb2zSWNJpj4ehhC4AWhHrwnrcAtv8zWh87WghWeSqx)
 
 1、基础数据库：MySQL、Redis、Sftp  
 2、java微服务：Nacos、链服务（包括文昌链链服务、中移链服务、泰安链服务）、后端相关微服务  （包括运营job、运营权限服务、交易服务 、交易job服务、基础服务、帐户服务、运营系统后端服务 、门户后端服务）  
@@ -257,6 +261,7 @@ curl -X POST 'http://{NACOS-HOST}:8848/nacos/v1/console/namespaces' -d 'customNa
 kong客户单配置可以从nacos或者运营系统修改。kong-gateway-config.yml
 
 ```yaml
+nacos:  
   kong:
     #网关中创建的consumers中Basic Auth用户名与密码
     password: "abc123"
