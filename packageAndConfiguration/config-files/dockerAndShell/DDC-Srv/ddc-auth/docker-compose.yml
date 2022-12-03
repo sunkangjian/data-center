@@ -1,0 +1,21 @@
+version: "3"
+services:
+  ddc-auth-service:
+    image: java11-cn:11.0.16.1
+    container_name: ddc-auth
+    working_dir: /bsn/ddc-auth
+    restart: always
+    network_mode: host
+    # ports:
+    #   - 8091:8091
+    volumes:
+      - $PWD/pkg/ddc-auth.jar:/bsn/ddc-auth/ROOT.jar
+      - /bsn/ddclogs/:/bsn/ddclogs/
+      - $PWD/script/:/bsn/script
+      - /etc/hosts:/etc/hosts
+      - /etc/localtime:/etc/localtime
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
+    command: sh /bsn/script/start.sh
+    

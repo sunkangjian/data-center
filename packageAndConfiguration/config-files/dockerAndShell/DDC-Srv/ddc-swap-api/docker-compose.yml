@@ -1,0 +1,21 @@
+version: "3"
+services:
+  ddc-swap-api-ddc-service:
+    image: java11-cn:11.0.16.1
+    container_name: ddc-swap-api
+    working_dir: /bsn/ddc-swap-api
+    restart: always
+    network_mode: host
+    # ports:
+    #   - 9070:9070
+    volumes:
+      - $PWD/pkg/ddc-swap-api.jar:/bsn/ddc-swap-api/ROOT.jar
+      - /bsn/ddclogs/:/bsn/ddclogs/
+      - $PWD/script/:/bsn/script
+      - /etc/hosts:/etc/hosts
+      - /etc/localtime:/etc/localtime
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
+    command: sh /bsn/script/start.sh
+    

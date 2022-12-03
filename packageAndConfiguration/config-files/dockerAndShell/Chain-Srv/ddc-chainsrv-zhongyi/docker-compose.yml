@@ -1,0 +1,21 @@
+version: "3"
+services:
+  ddc-chainsrv-zhongyi	:
+    image: java8:1.8.0_351
+    container_name: ddc-chainsrv-zhongyi	
+    working_dir: /bsn/chainService
+    restart: always
+    network_mode: host
+    # ports:
+    #   - 32030:32030
+    volumes:
+      - $PWD/pkg/ddc-chainsrv-zhongyi.jar:/bsn/chainService/ROOT.jar
+      - /bsn/ddclogs/:/bsn/ddclogs
+      - $PWD/script/:/bsn/script
+      - /etc/hosts:/etc/hosts
+      - /etc/localtime:/etc/localtime
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
+    command: sh /bsn/script/start.sh
+    

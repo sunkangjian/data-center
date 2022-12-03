@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ddc-nginx:
+    container_name: ddc-nginx
+    image: openresty/openresty:latest
+    restart: always
+    volumes:
+      - $PWD/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - $PWD/conf/ip_white.conf:/usr/local/openresty/nginx/conf/ip_white.conf
+      - $PWD/stream:/etc/nginx/conf.d
+      - $PWD/logs:/var/log/
+      - $PWD/ssl:/etc/nginx/ssl
+      - /etc/hosts:/etc/hosts
+      - $PWD/html/operation/dist:/usr/local/openresty/nginx/html/operation
+      - $PWD/html/portal/dist:/usr/local/openresty/nginx/html/portal
+    ports:
+      - "80:80"
+      - "443:443"
+      # - "8443:8443"
+    environment:
+        TZ: Asia/Shanghai

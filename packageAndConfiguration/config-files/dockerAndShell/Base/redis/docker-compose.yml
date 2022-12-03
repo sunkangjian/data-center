@@ -1,0 +1,20 @@
+version: '3'
+services:
+  redis:
+    image: 'redis:6.0.5'
+    container_name: 'redis'
+    restart: always
+    tty: true
+    volumes:
+      - $PWD/data:/data
+      - $PWD/conf/redis.conf:/etc/redis/redis.conf
+      - $PWD/logs:/logs
+    ports:
+      - 6379:6379
+    command:
+      - /bin/bash
+      - -c
+      - |
+        echo 1024 > /proc/sys/net/core/somaxconn
+        redis-server --requirepass "redis6379"
+    privileged: true

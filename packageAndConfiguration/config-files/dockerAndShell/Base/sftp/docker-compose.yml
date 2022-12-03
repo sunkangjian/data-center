@@ -1,0 +1,11 @@
+version: '2'
+services:
+  ftp:
+    image: atmoz/sftp
+    container_name: sftp
+    restart: always
+    volumes:
+        - ./data:/home/
+        - ./user/users.conf:/etc/sftp/users.conf
+    ports:
+        - "8012:22"

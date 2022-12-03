@@ -1,0 +1,21 @@
+version: "3"
+services:
+  ddc-swap-job-ddc-service:
+    image: java11-cn:11.0.16.1
+    container_name: ddc-swap-job
+    working_dir: /bsn/ddc-swap-job
+    restart: always
+    network_mode: host
+    # ports:
+    #   - 38021:38021
+    volumes:
+      - $PWD/pkg/ddc-swap-job.jar:/bsn/ddc-swap-job/ROOT.jar
+      - /bsn/ddclogs/:/bsn/ddclogs/
+      - $PWD/script/:/bsn/script
+      - /etc/hosts:/etc/hosts
+      - /etc/localtime:/etc/localtime
+    environment:
+      # 指定时区
+      - TZ=Asia/Shanghai
+    command: sh /bsn/script/start.sh
+    
