@@ -239,7 +239,7 @@ curl -X POST 'http://{NACOS-HOST}:8848/nacos/v1/console/namespaces' -d 'customNa
 
 #### 4.4.4 下载应用服务端配置文件
 
-- 应用服务端配置文件压缩包下载：[github地址](https://github.com/BSN-DDC/computingpower/tree/main/deployPackageAndConfiguration/packages)
+- 应用服务端配置文件压缩包下载：[github地址](https://github.com/BSN-DDC/computingpower/tree/main/deployPackageAndConfiguration/config-files/nacos-app)
 
 ##### 4.4.4.1. 配置清单
 
